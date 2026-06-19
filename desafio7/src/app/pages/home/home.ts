@@ -8,4 +8,12 @@ import { getXHRResponse } from 'rxjs/internal/ajax/getXHRResponse';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {}
+export class Home {
+ // Controla a visibilidade do menu lateral
+  isSidebarVisible: boolean = false;
+
+  // Função para alternar o menu
+  toggleSidebar(): void {
+    this.isSidebarVisible = !this.isSidebarVisible;
+  }
+}

@@ -2,69 +2,72 @@
 
   <div class="conteudo">
 
-     <div class="lado-esquerdo">
+    <!-- Esquerda -->
+    <div class="lado-esquerdo">
       <img src="img/ranger.png" alt="Ford Ranger">
     </div>
 
-
+    <!-- Direita -->
     <div class="lado-direito">
-    
-      
-  <div class="logo">
-    <img src="img/ford.png" alt="Ford">
-  </div>
 
+      <div class="formulario">
 
-      <h1>Boas-vindas</h1>
+        <!-- Logo -->
+        <div class="logo">
+          <img src="img/ford.png" alt="Ford">
+        </div>
 
-      <!-- EMAIL -->
-      <div class="campo">
-        <span class="icone">👤</span>
+        <h1>Boas-vindas</h1>
 
-        <input
-          type="email"
-          placeholder="Insira seu e-mail"
-          [(ngModel)]="email">
+        <!-- EMAIL -->
+        <div class="linha-campo">
+
+          <div class="campo">
+            <span class="icone">👤</span>
+
+            <input type="email" placeholder="Insira seu e-mail">
+
+          </div>
+
+          <span class="info">ⓘ</span>
+
+        </div>
+
+        <!-- SENHA -->
+        <div class="linha-campo">
+
+          <div class="campo">
+            <span class="icone">🔒</span>
+
+            <input type="password" placeholder="Insira sua senha">
+
+            <span class="olho">👁</span>
+
+          </div>
+
+        </div>
+
+        <!-- SWITCH -->
+        <div class="linha-switch">
+
+          <span class="texto-switch">
+            Logar automaticamente
+          </span>
+
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+
+          <span class="info">ⓘ</span>
+
+        </div>
+
+        <button class="btn-entrar" (click)="entrar()">
+          Entrar
+        </button>
+
       </div>
-
-      <div class="info-icon">
-       <span class="info">ⓘ</span>
-    </div>
-
-      <!-- SENHA -->
-      <div class="campo">
-        <span class="icone">🔒</span>
-
-        <input
-          type="password"
-          placeholder="Insira sua senha"
-          [(ngModel)]="senha">
-
-        <span class="olho">👁</span>
-      </div>
-
-      <!-- SWITCH -->
-      <div class="linha-switch">
-
-        <span class="texto-switch">
-          Logar automaticamente
-        </span>
-
-        <label class="switch">
-          <input
-            type="checkbox"
-            [(ngModel)]="logarAutomaticamente">
-
-          <span class="slider"></span>
-        </label>
-
-        <span class="info">ⓘ</span>
-
-      </div>
-
-      <button class="btn-entrar">
-        Entrar
-      </button>
 
     </div>
 

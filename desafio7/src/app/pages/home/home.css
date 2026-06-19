@@ -1,54 +1,52 @@
-.home-container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
+/* Configuração do Layout Geral */
+#wrapper {
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
 }
 
-.sidebar {
-    width: 180px;
-    padding: 20px;
+/* Menu Lateral */
+#sidebar-wrapper {
+  min-height: 100vh;
+  width: 240px;
+  margin-left: 0;
+  transition: margin .25s ease-out;
+  flex-shrink: 0;
 }
 
-.logo {
-    width: 100px;
-    margin-bottom: 30px;
+/* Quando a classe 'toggled' for ativada, o menu se esconde para a esquerda */
+#sidebar-wrapper.toggled {
+  margin-left: -240px;
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
+.logo-ford {
+  max-width: 120px;
 }
 
-.sidebar li {
-    margin-bottom: 15px;
-    cursor: pointer;
+/* Área da Direita (Navbar + Imagem da Ranger) */
+#page-content-wrapper {
+  min-width: 0;
+  height: 100vh;
 }
 
-.content {
-    flex: 1;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Imagem de Fundo da Ranger ocupando toda a área restante */
+.background-banner {
+  background-image: url('assets/ford-ranger.jpg'); /* Adicione sua imagem na pasta src/assets/ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.carro {
-    width: 700px;
+/* Card de Boas-Vindas */
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  min-height: 250px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
 }
-
-.card-home {
-    position: absolute;
-    background: white;
-    width: 350px;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.card-home h3{
-   margin-bottom: 15px;
-}
-
-.card-home a{
-    text-decoration: none;
-}
-

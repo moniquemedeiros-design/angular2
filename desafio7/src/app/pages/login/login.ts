@@ -7,12 +7,29 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './login.html',
-  styleUrl: './login.css'
+  styleUrls: ['./login.css']
 })
 export class Login {
 
   email = '';
   senha = '';
   logarAutomaticamente = false;
+
+  entrar() {
+
+    if (
+      this.email === 'admin' &&
+      this.senha === '123456'
+    ) {
+
+      alert('Login realizado com sucesso!');
+
+    } else {
+
+      alert('E-mail ou senha inválidos!');
+
+    }
+
+  }
 
 }
